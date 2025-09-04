@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movies</title>
+  <link rel="stylesheet" href="../styles/movies.css">
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <img src="../assets/icons/logo.png" alt="Logo">
+      <nav>
+        <a href="index.html">Movies</a>
+        <a href="TVShows.html">TV Shows</a>
+        <a href="Suggest.html">Suggest me</a>
+      </nav>
+    </header>
+    <main>
+      <p>MovieHive</p>
+      <h1>Movies</h1>
+      <div class="search-container">
+        <button id="searchButton" class="search-button" type="button">
+          <img class="search-icon" src="../assets/icons/search.png" alt="Search" />
+        </button>
+        <input type="text" id="searchInput" class="search-input" placeholder="Search Movies or TV Shows">
+      </div>
+      <p id="resultCount">8 items</p>
+      <div id="movieGrid" class="movie-grid"></div>
+
+  </div>
+  </div>
+  <script src="movies.js"></script>
+  <script src="../scripts/config.js"></script>
+</body>
+
+</html>
