@@ -2,37 +2,74 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Movies</title>
-  <link rel="stylesheet" href="../styles/movies.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MovieHive | Movies</title>
+
+  <!-- Google Fonts (Poppins) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS and favicon -->
+  <link rel="icon" type="image/x-icon" href="../assets/Home Assets/MovieHive logo.svg">
+  <link rel="stylesheet" href="../styles/movies.css" />
 </head>
 
 <body>
-  <div class="container">
-    <header>
-      <img src="../assets/icons/logo.png" alt="Logo">
-      <nav>
-        <a href="index.html">Movies</a>
-        <a href="TVShows.html">TV Shows</a>
-        <a href="Suggest.html">Suggest me</a>
+  <div class="home-container">
+
+    <div class="background-blur"></div>
+
+    <!-- Navbar Section -->
+
+    <header class="navbar">
+      <!-- Logo -->
+      <a href="../index.html" class="logo-link"><img class="logo" src="../assets/Home Assets/MovieHive logo.svg"
+          alt="MovieHive Logo" /></a>
+
+      <!-- Navigation Links -->
+      <nav class="nav-links">
+        <a href="./Movies.html">Movies</a>
+        <a href="./TVshows.html">TV Shows</a>
+        <a href="./login.html" class="suggest-button">
+          Login to MovieHive
+          <img src="../assets/Home Assets/Arrow Icon White.svg" alt="arrow icon" />
+        </a>
       </nav>
     </header>
+
     <main>
-      <p>MovieHive</p>
-      <h1>Movies</h1>
-      <div class="search-container">
-        <button id="searchButton" class="search-button" type="button">
-          <img class="search-icon" src="../assets/icons/search.png" alt="Search" />
-        </button>
-        <input type="text" id="searchInput" class="search-input" placeholder="Search Movies or TV Shows">
-      </div>
-      <p id="resultCount">8 items</p>
-      <div id="movieGrid" class="movie-grid"></div>
+      <!-- Hero Section (title, description, search bar) -->
+      <section class="hero-section">
+        <p>MovieHive</p>
+        <h1>Movies</h1>
+        <div class="search-bar">
+          <img id="searchButton" class="search-icon" src="../assets/Home Assets/search-normal.svg" alt="search icon" />
+          <input type="text" id="searchInput" placeholder="Search Movies or TV Shows" />
+        </div>
+      </section>
+
+      <!-- Movies & TV Shows Section -->
+      <section class="movies-section">
+        <!-- Section title and filter tabs -->
+        <div class="filters-and-title">
+          <div class="filter-tabs">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button id="popular" class="filter-btn" data-filter="movie">Movies</button>
+            <button id=""  class="filter-btn" data-filter="tv-show">TV Shows</button>
+          </div>
+          <h2 class="section-title">All <span id="resultCount">8</span></h2>
+        </div>
+        <div id="movieGrid" class="movie-grid"></div>
+      </section>
     </main>
   </div>
+
+  <!-- JavaScript linking-->
   <script type="module" src="../scripts/movies.js"></script>
-  <script type="module" src="../scripts/config.js"></script>
+  <script type="module" src="../config.js"></script>
+  <script src="../scripts/index.js"></script>
 </body>
 
 </html>

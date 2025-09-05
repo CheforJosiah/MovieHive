@@ -1,12 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MovieHive</title>
-</head>
-<body>
 
-  <script src="./scripts/config.js"></script>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MovieHive</title>
+
+    <!-- Google Fonts (Poppins) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS and favicon -->
+    <link rel="icon" type="image/x-icon" href="./assets/Home Assets/MovieHive logo.svg">
+    <link rel="stylesheet" href="./styles/index.css" />
+</head>
+
+<body>
+    <div class="home-container">
+
+        <div class="background-blur"></div>
+
+        <!-- Navbar Section -->
+
+        <header class="navbar">
+            <!-- Logo -->
+            <a href="#" class="logo-link"><img class="logo" src="./assets/Home Assets/MovieHive logo.svg"
+                    alt="MovieHive Logo" /></a>
+
+            <!-- Navigation Links -->
+            <nav class="nav-links">
+                <a href="./pages/Movies.html">Movies</a>
+                <a href="./pages/TVshows.html">TV Shows</a>
+                <a href="./pages/login.html" class="suggest-button">
+                    Login to MovieHive
+                    <img src="./assets/Home Assets/Arrow Icon White.svg" alt="arrow icon" />
+                </a>
+            </nav>
+        </header>
+
+        <main>
+            <!-- Hero Section (title, description, search bar) -->
+            <section class="hero-section">
+                <h1>MovieHive</h1>
+                <p class="subtitle">
+                    List of movies and TV Shows I, <span>Pramod Poudel</span>, have watched. Explore my list and feel
+                    free to make a suggestion. 😉
+                </p>
+                <div class="search-bar">
+                    <img class="search-icon" src="./assets/Home Assets/search-normal.svg" alt="search icon" />
+                    <input type="text" placeholder="Search Movies or TV Shows" />
+                </div>
+            </section>
+
+            <!-- Movies & TV Shows Section -->
+            <section class="movies-section">
+                <!-- Section title and filter tabs -->
+                <div class="filters-and-title">
+                    <div class="filter-tabs">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="movie">Movies</button>
+                        <button class="filter-btn" data-filter="tv-show">TV Shows</button>
+                    </div>
+                    <h2 class="section-title">All <span>(8)</span></h2>
+                </div>
+
+                <!-- Grid of Movie/TV Show Cards -->
+                <div class="movie-grid">
+
+                    <!-- Card 1 -->
+                    <a href="#" class="movie-card" data-category="movie">
+                        <img src="./assets/Poster images/Black Widow.png" alt="Movie Poster"
+                            class="card-poster" />
+                        <div class="rating-badge">
+                            <img src="./assets/Home Assets/star.svg" alt="star icon" /> 6.8
+                        </div>
+                        <div class="card-title">Black Widow</div>
+                    </a>
+
+                    <!-- Card 2 -->
+                    <a href="#" class="movie-card" data-category="movie">
+                        <img src="./assets/Poster images/Shang-Chi-and-the-Legend-of-the-Ten-Rings.png"
+                            alt="Movie Poster" class="card-poster" />
+                        <div class="rating-badge">
+                            <img src="./assets/Home Assets/star.svg" alt="star icon" /> 7.9
+                        </div>
+                        <div class="card-title">Shang Chi</div>
+                    </a>
+
+                    <!-- Card 3 -->
+                    <a href="#" class="movie-card" data-category="tv-show">
+                        <img src="./assets/Poster images/Loki.png" alt="Movie Poster" class="card-poster" />
+                        <div class="rating-badge">
+                            <img src="./assets/Home Assets/star.svg" alt="star icon" /> 8.4
+                        </div>
+                        <div class="card-title">Loki</div>
+                    </a>
+
+                    <!-- Card 4 -->
+                    <a href="#" class="movie-card" data-category="tv-show">
+                        <img src="./assets/Poster images/How i met your mother.png" alt="Movie Poster"
+                            class="card-poster" />
+                        <div class="rating-badge">
+                            <img src="./assets/Home Assets/star.svg" alt="star icon" /> 8.3
+                        </div>
+                        <div class="card-title">How I Met Your Mother</div>
+                    </a>
+
+                    <!-- Card 5 -->
+                    <a href="#" class="movie-card" data-category="movie">
+                        <img src="./assets/Poster images/money heist.png" alt="Movie Poster"
+                            class="card-poster" />
+                        <div class="rating-badge">
+                            <img src="./assets/Home Assets/star.svg" alt="star icon" /> 6.8
+                        </div>
+                        <div class="card-title">Money Heist</div>
+                    </a>
+
+                    <!-- Card 6 -->
+                    <a href="#" class="movie-card" data-category="movie">
+                        <img src="./assets/Poster images/Friends.png" alt="Movie Poster"
+                            class="card-poster" />
+                        <div class="rating-badge">
+                            <img src="./assets/Home Assets/star.svg" alt="star icon" /> 7.9
+                        </div>
+                        <div class="card-title">Friends</div>
+                    </a>
+
+                    <!-- Card 7 -->
+                    <a href="#" class="movie-card" data-category="tv-show">
+                        <img src="./assets/Poster images/Big bang theory.png" alt="Movie Poster"
+                            class="card-poster" />
+                        <div class="rating-badge">
+                            <img src="./assets/Home Assets/star.svg" alt="star icon" /> 8.4
+                        </div>
+                        <div class="card-title">Big Bang Theory</div>
+                    </a>
+
+                    <!-- Card 8 -->
+                    <a href="#" class="movie-card" data-category="tv-show">
+                        <img src="./assets/Poster images/Two and a half men.png" alt="Movie Poster"
+                            class="card-poster" />
+                        <div class="rating-badge">
+                            <img src="./assets/Home Assets/star.svg" alt="star icon" /> 8.3
+                        </div>
+                        <div class="card-title">Two and a Half Men</div>
+                    </a>
+
+
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- JavaScript linking-->
+    <script src="./scripts/index.js"></script>
 </body>
+
 </html>
